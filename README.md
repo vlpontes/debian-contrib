@@ -45,8 +45,8 @@ apt update
 ```
 
 
-Check if the bug was('nt) outside Debian
-https://tracker.debian.org/nameofpackage
+Check if the bug was('nt) fixed outside Debian:  
+https://tracker.debian.org/nameofpackage  
 Clicking in other distros redirects to: https://repology.org/project/nameofpackage
 
 #### Starting fixing the bug:
