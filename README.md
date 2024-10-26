@@ -3,7 +3,7 @@
 
 # Debian Contributions
 [Debian Site](https://www.debian.org/)  
-[Contribute: How you can help Debian](https://www.debian.org/intro/help)
+[How you can help Debian](https://www.debian.org/intro/help)
 
 [Orfan Packages](https://qa.debian.org/developer.php?email=packages@qa.debian.org)
 
