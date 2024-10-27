@@ -34,33 +34,28 @@ bts select maintainer:packages@qa.debian.org status:open usertag:ftbfs-gcc-14 us
 
 #### Create the environment:
 ```bash
-apt install lxc
-lxc-create -n dev-unstable -t debian -- -r unstable
-lxc-start dev-unstable
-lxc-attach dev-unstable
- - Inside the environment
-apt update
-echo "deb-src http://deb.debian.org/debian unstable main" >> /etc/apt/sources.list
-apt update
-apt install devscripts
+docker run -it \
+--name debian-bugfix \
+vlpontes/debian-bugfix:latest
 ```
 
-
-Check if the bug was('nt) fixed outside Debian:  
-https://tracker.debian.org/nameofpackage  
-Clicking in other distros redirects to: https://repology.org/project/nameofpackage
+#### Check if the bug was('nt) fixed outside Debian:  
+https://tracker.debian.org/**nameofpackage**  
+Clicking in "other distros" redirects to: https://repology.org/project/**nameofpackage**
 
 #### Starting fixing the bug:
 ```bash
-lxc-attach dev-unstable
-mkdir -p /pkgs/nameofpackage; cd /pkgs/nameofpackage
+mkdir nameofpackage; cd nameofpackage
 apt source nameofpackage
 cd nameofpackage
 debuild
+```
 
-#### Create a patch to the fix:   
+#### Create a patch to the fix:  
+
 ```bash
 ls debian/patches # to check the name of previous patches
 dpkg-source --commit # to create a patch
 debuild # compile the package you just fixed
 debi # to install and test the fixed package before sending to Debian
+```
