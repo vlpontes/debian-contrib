@@ -52,7 +52,6 @@ debuild
 ```
 
 #### Create a patch to the fix:  
-
 ```bash
 ls debian/patches # to check the name of previous patches
 dpkg-source --commit # to create a patch

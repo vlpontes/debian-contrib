@@ -14,7 +14,8 @@ RUN echo "deb-src http://deb.debian.org/debian unstable main" >> /etc/apt/source
     && apt full-upgrade -y \
     && apt install -y \
     devscripts \
-    git
+    git \
+    vim 
 
 RUN mkdir -p /home/pkgs
 WORKDIR /home/pkgs
