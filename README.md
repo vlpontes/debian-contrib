@@ -42,6 +42,7 @@ lxc-attach dev-unstable
 apt update
 echo "deb-src http://deb.debian.org/debian unstable main" >> /etc/apt/sources.list
 apt update
+apt install devscripts
 ```
 
 
@@ -56,3 +57,10 @@ mkdir -p /pkgs/nameofpackage; cd /pkgs/nameofpackage
 apt source nameofpackage
 cd nameofpackage
 debuild
+
+#### Create a patch to the fix:   
+```bash
+ls debian/patches # to check the name of previous patches
+dpkg-source --commit # to create a patch
+debuild # compile the package you just fixed
+debi # to install and test the fixed package before sending to Debian
