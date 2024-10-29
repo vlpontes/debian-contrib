@@ -27,7 +27,7 @@ Filter:
 Get following informatio to filter:
 - User and Usertags
 
-#### Bug consulting in command line
+#### Checking bugs in the command line:
 ```bash
 apt install devscripts
 man bts | grep select
