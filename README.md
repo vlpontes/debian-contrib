@@ -3,7 +3,7 @@
 
 # Debian Contributions
 
-What is **Debian**:  
+What is **Debian**?   
 - [Debian Official Website](https://www.debian.org/)  
 
 Find out 
@@ -12,12 +12,12 @@ Find out
 Packages in need of a maintainer:
 - [Orfan Packages](https://qa.debian.org/developer.php?email=packages@qa.debian.org)
 
-Bugs: https://bugs.debian.org/BUGNUMBER  
-      https://bugs.debian.org/PACKAGENAME
+Bugs: https://bugs.debian.org/**BUGNUMBER**    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;https://bugs.debian.org/**PACKAGENAME**
 
 [bugs.debian.org](https://www.debian.org/Bugs/)  
 - Search for bugs with severity: Critical. Grave and Serious  
-- Select Bugs "in packages maintained by "packages@qa.debian.org"
+- Select Bugs "in packages maintained by "**packages@qa.debian.org**"
 
 Another way to search for bugs:  
 [udd.debian.org/bugs](https://udd.debian.org/bugs)  
