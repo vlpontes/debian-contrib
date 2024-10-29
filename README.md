@@ -2,10 +2,15 @@
 
 
 # Debian Contributions
-[Debian Site](https://www.debian.org/)  
-[How you can help Debian](https://www.debian.org/intro/help)
 
-[Orfan Packages](https://qa.debian.org/developer.php?email=packages@qa.debian.org)
+What is **Debian**:  
+- [Debian Official Website](https://www.debian.org/)  
+
+Find out 
+[HERE](https://www.debian.org/intro/help) how you can contribute to Debian  
+
+Packages in need of a maintainer:
+- [Orfan Packages](https://qa.debian.org/developer.php?email=packages@qa.debian.org)
 
 Bugs: https://bugs.debian.org/BUGNUMBER  
       https://bugs.debian.org/PACKAGENAME
@@ -39,22 +44,30 @@ docker run -it \
 vlpontes/debian-bugfix:latest
 ```
 
+
 #### Check if the bug was('nt) fixed outside Debian:  
-https://tracker.debian.org/**nameofpackage**  
-Clicking in "other distros" redirects to: https://repology.org/project/**nameofpackage**
+https://tracker.debian.org/**package_name**  
+Clicking in "other distros" redirects to: https://repology.org/project/**package_name**
 
-#### Starting fixing the bug:
+<details>
+<summary>Starting fixing the bug:</summary>  
+
 ```bash
-mkdir nameofpackage; cd nameofpackage
-apt source nameofpackage
-cd nameofpackage
-debuild
+mkdir package_name; cd package_name # create a folder with the name of the package
+apt source package_name # download the source code of the package
+cd package_name-version # after downloading it extracts a folder with the name of the package
+debuild # compile the source code
 ```
+</details>  
 
-#### Create a patch to the fix:  
-```bash
+<details>
+<summary>Create a patch to the fix:</summary>  
+
+```bash 
 ls debian/patches # to check the name of previous patches
 dpkg-source --commit # to create a patch
 debuild # compile the package you just fixed
 debi # to install and test the fixed package before sending to Debian
 ```
+</details>
+
